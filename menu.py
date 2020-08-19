@@ -30,6 +30,6 @@ while (sair != 4):
     elif menu == 3:
         print("nada")
     elif menu == 4:
-        continue
+        break
     else:
         print("Opção Inválida")
