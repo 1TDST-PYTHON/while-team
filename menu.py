@@ -26,7 +26,6 @@ while(sair != 4):
         estado = input("Escolha o estado que deseja fazer o curso: ").upper()
         while validar_estado(_estado) is not True:
             _estado = input("Escolha o estado que deseja fazer o curso: ").upper()
-            validar_estado(_estado)
 
         _curso = input("Cursos:", cursos,"Escolha um dos cursos disponíveis: ")
         nome.append(_nome)
