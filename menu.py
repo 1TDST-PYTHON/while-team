@@ -1,3 +1,6 @@
+from desafioo.ValidaEstado import *
+#Aqui fica o pacote final do projeto, este é provisório
+
 nome = []
 cpf =[]
 estado = []
@@ -19,8 +22,13 @@ while(sair != 4):
         print("Para realizar a inscrição informe os seguintes dados: ")
         _nome = input("Digite o nome do aluno: ")
         _cpf = input("Digite o CPF do aluno: ")
-        _estado = input("Escolha o estado que deseja fazer o curso: ")
-        _curso = input("Escolha um dos cursos disponíveis: ")
+
+        estado = input("Escolha o estado que deseja fazer o curso: ").upper()
+        while validar_estado(_estado) is not True:
+            _estado = input("Escolha o estado que deseja fazer o curso: ").upper()
+            validar_estado(_estado)
+
+        _curso = input("Cursos:", cursos,"Escolha um dos cursos disponíveis: ")
         nome.append(_nome)
         cpf.append(_cpf)
         estado.append(_estado)
